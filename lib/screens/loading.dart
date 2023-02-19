@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class Loading extends StatefulWidget {
   @override
-  _LoadingState createState() => _LoadingState();
+  _LoadingState createState() => _LoadingState(1);
 }
 
 class _LoadingState extends State<Loading> {
