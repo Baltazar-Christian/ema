@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -10,6 +12,10 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final GlobalKey<FormState> formkey = GlobalKey<FormState>();
+
+  TextEditingController txtEmail = TextEditingController();
+  TextEditingController txtPassword = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +28,8 @@ class _LoginState extends State<Login> {
         padding: EdgeInsets.all(32),
         children: [
           TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            controller: txtEmail,
             decoration: InputDecoration(
                 labelText: 'Email',
                 contentPadding: EdgeInsets.all(10),
